@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1643757957529" clover="3.2.0">
-  <project timestamp="1643757957529" name="All files">
-    <metrics statements="227" coveredstatements="112" conditionals="94" coveredconditionals="70" methods="70" coveredmethods="34" elements="391" coveredelements="216" complexity="0" loc="227" ncloc="227" packages="3" files="16" classes="16"/>
+<coverage generated="1643758345203" clover="3.2.0">
+  <project timestamp="1643758345204" name="All files">
+    <metrics statements="228" coveredstatements="143" conditionals="96" coveredconditionals="72" methods="70" coveredmethods="39" elements="394" coveredelements="254" complexity="0" loc="228" ncloc="228" packages="3" files="16" classes="16"/>
     <package name="constants">
       <metrics statements="8" coveredstatements="8" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
       <file name="routes.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/constants/routes.js">
         <metrics statements="8" coveredstatements="8" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="13" count="4" type="stmt"/>
-        <line num="14" count="9" type="cond" truecount="5" falsecount="0"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="13" type="cond" truecount="5" falsecount="0"/>
         <line num="16" count="3" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
       </file>
       <file name="usersTest.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/constants/usersTest.js">
@@ -20,7 +20,7 @@
       </file>
     </package>
     <package name="containers">
-      <metrics statements="190" coveredstatements="77" conditionals="59" coveredconditionals="37" methods="54" coveredmethods="18"/>
+      <metrics statements="190" coveredstatements="107" conditionals="59" coveredconditionals="37" methods="54" coveredmethods="23"/>
       <file name="Bills.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/containers/Bills.js">
         <metrics statements="26" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="8" coveredmethods="0"/>
         <line num="7" count="0" type="stmt"/>
@@ -52,21 +52,21 @@
       </file>
       <file name="Dashboard.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/containers/Dashboard.js">
         <metrics statements="78" coveredstatements="70" conditionals="45" coveredconditionals="37" methods="25" coveredmethods="16"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="9" count="21" type="cond" truecount="4" falsecount="0"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="27" type="cond" truecount="4" falsecount="0"/>
         <line num="14" count="24" type="cond" truecount="1" falsecount="1"/>
         <line num="15" count="24" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="24" count="24" type="stmt"/>
-        <line num="28" count="4" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
         <line num="29" count="8" type="stmt"/>
         <line num="30" count="8" type="cond" truecount="1" falsecount="1"/>
         <line num="32" count="8" type="cond" truecount="1" falsecount="1"/>
         <line num="35" count="8" type="stmt"/>
-        <line num="53" count="4" type="stmt"/>
+        <line num="53" count="5" type="stmt"/>
         <line num="54" count="8" type="cond" truecount="4" falsecount="0"/>
-        <line num="57" count="4" type="stmt"/>
+        <line num="57" count="5" type="stmt"/>
         <line num="58" count="3" type="cond" truecount="3" falsecount="0"/>
         <line num="60" count="1" type="stmt"/>
         <line num="62" count="1" type="stmt"/>
@@ -132,43 +132,43 @@
         <line num="181" count="0" type="stmt"/>
       </file>
       <file name="Login.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/containers/Login.js">
-        <metrics statements="41" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="11" coveredmethods="0"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
+        <metrics statements="41" coveredstatements="30" conditionals="4" coveredconditionals="0" methods="11" coveredmethods="5"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="55" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
         <line num="62" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="63" count="0" type="stmt"/>
         <line num="68" count="0" type="stmt"/>
         <line num="71" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
+        <line num="76" count="2" type="stmt"/>
         <line num="77" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="78" count="0" type="stmt"/>
         <line num="89" count="0" type="stmt"/>
@@ -228,24 +228,25 @@
       </file>
     </package>
     <package name="views">
-      <metrics statements="29" coveredstatements="27" conditionals="30" coveredconditionals="28" methods="15" coveredmethods="15"/>
+      <metrics statements="30" coveredstatements="28" conditionals="32" coveredconditionals="30" methods="15" coveredmethods="15"/>
       <file name="Actions.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/views/Actions.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="6" type="stmt"/>
       </file>
       <file name="BillsUI.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/views/BillsUI.js">
-        <metrics statements="11" coveredstatements="9" conditionals="8" coveredconditionals="6" methods="6" coveredmethods="6"/>
-        <line num="7" count="5" type="stmt"/>
+        <metrics statements="12" coveredstatements="10" conditionals="10" coveredconditionals="8" methods="6" coveredmethods="6"/>
+        <line num="7" count="6" type="stmt"/>
         <line num="8" count="4" type="stmt"/>
-        <line num="22" count="5" type="stmt"/>
-        <line num="23" count="4" type="cond" truecount="4" falsecount="0"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="45" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="23" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="45" count="5" type="cond" truecount="1" falsecount="1"/>
         <line num="46" count="0" type="stmt"/>
-        <line num="47" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="47" count="5" type="cond" truecount="1" falsecount="1"/>
         <line num="48" count="0" type="stmt"/>
-        <line num="51" count="6" type="stmt"/>
-        <line num="53" count="3" type="stmt"/>
+        <line num="51" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="52" count="6" type="stmt"/>
+        <line num="56" count="5" type="stmt"/>
       </file>
       <file name="DashboardFormUI.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/views/DashboardFormUI.js">
         <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
@@ -254,11 +255,11 @@
       </file>
       <file name="DashboardUI.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/views/DashboardUI.js">
         <metrics statements="5" coveredstatements="5" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
-        <line num="10" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="11" type="cond" truecount="2" falsecount="0"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="12" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="10" type="cond" truecount="2" falsecount="0"/>
         <line num="13" count="3" type="stmt"/>
-        <line num="16" count="5" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
       </file>
       <file name="ErrorPage.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/views/ErrorPage.js">
         <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
@@ -270,7 +271,7 @@
       </file>
       <file name="LoginUI.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/views/LoginUI.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="4" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
       </file>
       <file name="NewBillUI.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/views/NewBillUI.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -278,12 +279,12 @@
       </file>
       <file name="VerticalLayout.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/views/VerticalLayout.js">
         <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
-        <line num="7" count="18" type="stmt"/>
-        <line num="8" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="22" type="stmt"/>
+        <line num="8" count="22" type="cond" truecount="2" falsecount="0"/>
         <line num="9" count="7" type="stmt"/>
-        <line num="11" count="18" type="cond" truecount="4" falsecount="0"/>
+        <line num="11" count="22" type="cond" truecount="4" falsecount="0"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="29" count="17" type="stmt"/>
+        <line num="29" count="21" type="stmt"/>
       </file>
     </package>
   </project>
