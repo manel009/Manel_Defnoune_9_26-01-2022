@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1643758345203" clover="3.2.0">
-  <project timestamp="1643758345204" name="All files">
-    <metrics statements="228" coveredstatements="143" conditionals="96" coveredconditionals="72" methods="70" coveredmethods="39" elements="394" coveredelements="254" complexity="0" loc="228" ncloc="228" packages="3" files="16" classes="16"/>
+<coverage generated="1643837263991" clover="3.2.0">
+  <project timestamp="1643837263991" name="All files">
+    <metrics statements="233" coveredstatements="143" conditionals="100" coveredconditionals="72" methods="70" coveredmethods="39" elements="403" coveredelements="254" complexity="0" loc="233" ncloc="233" packages="3" files="16" classes="16"/>
     <package name="constants">
       <metrics statements="8" coveredstatements="8" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
       <file name="routes.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/constants/routes.js">
@@ -20,7 +20,7 @@
       </file>
     </package>
     <package name="containers">
-      <metrics statements="190" coveredstatements="107" conditionals="59" coveredconditionals="37" methods="54" coveredmethods="23"/>
+      <metrics statements="195" coveredstatements="107" conditionals="63" coveredconditionals="37" methods="54" coveredmethods="23"/>
       <file name="Bills.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/containers/Bills.js">
         <metrics statements="26" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="8" coveredmethods="0"/>
         <line num="7" count="0" type="stmt"/>
@@ -186,7 +186,7 @@
         <line num="13" count="2" type="stmt"/>
       </file>
       <file name="NewBill.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/containers/NewBill.js">
-        <metrics statements="38" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="0"/>
+        <metrics statements="43" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="8" coveredmethods="0"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
@@ -203,28 +203,33 @@
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
         <line num="66" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="67" count="0" type="stmt"/>
-        <line num="71" count="0" type="stmt"/>
-        <line num="73" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
       </file>
     </package>
     <package name="views">
