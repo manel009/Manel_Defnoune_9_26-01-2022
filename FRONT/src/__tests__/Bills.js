@@ -12,6 +12,7 @@ import Bills from "../containers/Bills.js"
 import { ROUTES, ROUTES_PATH } from '../constants/routes'
 import Router from '../app/Router.js'
 import { localStorageMock } from '../__mocks__/localStorage.js'
+import store from "../__mocks__/store"
 
 // On se connect en tant qu'employee avant les tests
 Object.defineProperty(window, 'localStorage', {
@@ -111,6 +112,33 @@ describe("Given I am connected as an employee", () => {
             // on verifi que le modal est bien apparu
             const modale = screen.getByTestId('modaleFile')
             expect(modale).toBeTruthy()
+        })
+    })
+
+    describe("When I navigate to Dashboard", () => {
+        test("Fetches bills from mock API GET", async() => {
+            const getSpy = jest.spyOn(store, "get")
+            const bills = await store.get()
+            expect(getSpy).toHaveBeenCalledTimes(1)
+            expect(bills.data.length).toBe(4)
+        })
+        test("Fetches bills from an API and fails with 404 message error", async() => {
+            store.get.mockImplementationOnce(() =>
+                Promise.reject(new Error("Erreur 404"))
+            )
+            const html = BillsUI({ error: "Erreur 404" })
+            document.body.innerHTML = html
+            const message = screen.getByText(/Erreur 404/)
+            expect(message).toBeTruthy()
+        })
+        test("Fetches messages from an API and fails with 500 message error", async() => {
+            store.get.mockImplementationOnce(() =>
+                Promise.reject(new Error("Erreur 500"))
+            )
+            const html = BillsUI({ error: "Erreur 500" })
+            document.body.innerHTML = html
+            const message = screen.getByText(/Erreur 500/)
+            expect(message).toBeTruthy()
         })
     })
 })

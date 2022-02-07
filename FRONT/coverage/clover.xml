@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1644272553323" clover="3.2.0">
-  <project timestamp="1644272553323" name="All files">
+<coverage generated="1644272840782" clover="3.2.0">
+  <project timestamp="1644272840782" name="All files">
     <metrics statements="234" coveredstatements="164" conditionals="100" coveredconditionals="78" methods="70" coveredmethods="45" elements="404" coveredelements="287" complexity="0" loc="234" ncloc="234" packages="3" files="16" classes="16"/>
     <package name="constants">
       <metrics statements="8" coveredstatements="8" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
@@ -245,11 +245,11 @@
         <line num="8" count="12" type="stmt"/>
         <line num="22" count="6" type="stmt"/>
         <line num="23" count="12" type="cond" truecount="4" falsecount="0"/>
-        <line num="28" count="9" type="stmt"/>
-        <line num="48" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="11" type="stmt"/>
+        <line num="48" count="11" type="cond" truecount="2" falsecount="0"/>
         <line num="49" count="1" type="stmt"/>
-        <line num="50" count="8" type="cond" truecount="2" falsecount="0"/>
-        <line num="51" count="1" type="stmt"/>
+        <line num="50" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="51" count="3" type="stmt"/>
         <line num="54" count="7" type="cond" truecount="2" falsecount="0"/>
         <line num="55" count="12" type="stmt"/>
         <line num="59" count="7" type="stmt"/>
@@ -269,7 +269,7 @@
       </file>
       <file name="ErrorPage.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/views/ErrorPage.js">
         <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="4" count="6" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
       </file>
       <file name="LoadingPage.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/views/LoadingPage.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -285,11 +285,11 @@
       </file>
       <file name="VerticalLayout.js" path="/Users/maneldefnoune/Documents/GitHub/Bill/Manel_Defnoune_9_26-01-2022/FRONT/src/views/VerticalLayout.js">
         <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
-        <line num="7" count="28" type="stmt"/>
-        <line num="8" count="28" type="cond" truecount="2" falsecount="0"/>
-        <line num="9" count="15" type="stmt"/>
-        <line num="11" count="28" type="cond" truecount="4" falsecount="0"/>
-        <line num="12" count="9" type="stmt"/>
+        <line num="7" count="30" type="stmt"/>
+        <line num="8" count="30" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="17" type="stmt"/>
+        <line num="11" count="30" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="11" type="stmt"/>
         <line num="29" count="19" type="stmt"/>
       </file>
     </package>
