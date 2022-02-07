@@ -3,11 +3,13 @@
  */
 import '@testing-library/jest-dom'
 import { screen } from "@testing-library/dom"
+import userEvent from '@testing-library/user-event'
 
 import BillsUI from "../views/BillsUI.js"
 import { bills } from "../fixtures/bills.js"
+import Bills from "../containers/Bills.js"
 
-import { ROUTES_PATH } from '../constants/routes'
+import { ROUTES, ROUTES_PATH } from '../constants/routes'
 import Router from '../app/Router.js'
 import { localStorageMock } from '../__mocks__/localStorage.js'
 
@@ -25,6 +27,8 @@ window.localStorage.setItem(
 describe("Given I am connected as an employee", () => {
     describe("When I am on Bills Page", () => {
         test("Then bill icon in vertical layout should be highlighted", () => {
+            const html = BillsUI({ data: [] });
+            document.body.innerHTML = html;
 
             // On dit qu'on veut aller vers la page bills
             window.location.assign(ROUTES_PATH['Bills']);
@@ -45,6 +49,36 @@ describe("Given I am connected as an employee", () => {
             const antiChrono = (a, b) => ((a < b) ? 1 : -1)
             const datesSorted = [...dates].sort(antiChrono)
             expect(dates).toEqual(datesSorted)
+        })
+
+        test("Then I can click on the NewBill button to access to the form", () => {
+            // initialisation  
+            const onNavigate = (pathname) => { document.body.innerHTML = ROUTES({ pathname }) }
+            const html = BillsUI({ data: bills })
+            document.body.innerHTML = html
+            const containerBills = new Bills({
+                document,
+                onNavigate,
+                firestore: null,
+                localStorage: null
+            })
+
+            // creation du mock de handleClickNewBill
+            const handleClickNewBill = jest.spyOn(containerBills, 'handleClickNewBill')
+            const btnNewBill = screen.getByTestId('btn-new-bill')
+
+            // on associe le mock a l'event click du bouton 
+            btnNewBill.addEventListener('click', handleClickNewBill)
+
+            //on simule le clique
+            userEvent.click(btnNewBill)
+                // on verifi que le mock a bien ete appele au clique
+            expect(handleClickNewBill).toHaveBeenCalled()
+
+            // on recupere le form pour cree un bill et on verifie qu'il est genere
+            const formNewBill = screen.getByTestId('form-new-bill')
+            expect(formNewBill).toBeTruthy()
+
         })
     })
 })
