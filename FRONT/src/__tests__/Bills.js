@@ -81,4 +81,36 @@ describe("Given I am connected as an employee", () => {
 
         })
     })
+
+
+    describe('When I click on the icon eye', () => {
+        test('A modal should open', () => {
+            // mock des fonction modal
+            $.fn.modal = jest.fn()
+
+            // initialisation  
+            const onNavigate = (pathname) => { document.body.innerHTML = ROUTES({ pathname }) }
+            const html = BillsUI({ data: bills })
+            document.body.innerHTML = html
+            const containerBills = new Bills({
+                document,
+                onNavigate,
+                firestore: null,
+                localStorage: null
+            })
+
+            // mock pour la fonction handleClickIconEye
+            const handleClickIconEye = jest.spyOn(containerBills, 'handleClickIconEye')
+            const firstIconEye = screen.getAllByTestId('icon-eye')[0]
+            firstIconEye.addEventListener('click', handleClickIconEye(firstIconEye))
+
+            // on test le click sur l'icone
+            userEvent.click(firstIconEye)
+            expect(handleClickIconEye).toHaveBeenCalled()
+
+            // on verifi que le modal est bien apparu
+            const modale = screen.getByTestId('modaleFile')
+            expect(modale).toBeTruthy()
+        })
+    })
 })

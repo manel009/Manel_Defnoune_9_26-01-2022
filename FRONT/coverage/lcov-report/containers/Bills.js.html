@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">58.62% </span>
+                <span class="strong">75.86% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/29</span>
+                <span class='fraction'>22/29</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/8</span>
+                <span class='fraction'>6/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">57.69% </span>
+                <span class="strong">73.08% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>15/26</span>
+                <span class='fraction'>19/26</span>
             </div>
         
             
@@ -123,31 +123,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -190,7 +190,7 @@ export default class {
     if (buttonNewBill) buttonNewBill.addEventListener('click', this.handleClickNewBill)
     const iconEye = document.querySelectorAll(`div[data-testid="icon-eye"]`)
     <span class="missing-if-branch" title="else path not taken" >E</span>if (iconEye) iconEye.forEach(icon =&gt; {
-      icon.addEventListener('click', <span class="fstat-no" title="function not covered" >(e</span>) =&gt; <span class="cstat-no" title="statement not covered" >this.handleClickIconEye(icon))</span>
+      icon.addEventListener('click', (e) =&gt; this.handleClickIconEye(icon))
     })
     new Logout({ document, localStorage, onNavigate })
   }
@@ -199,11 +199,11 @@ export default class {
     this.onNavigate(ROUTES_PATH['NewBill'])
   }
 &nbsp;
-  handleClickIconEye = <span class="fstat-no" title="function not covered" >(i</span>con) =&gt; {
-    const billUrl = <span class="cstat-no" title="statement not covered" >icon.getAttribute("data-bill-url")</span>
-    const imgWidth = <span class="cstat-no" title="statement not covered" >Math.floor($('#modaleFile').width() * 0.5)</span>
-<span class="cstat-no" title="statement not covered" >    $('#modaleFile').find(".modal-body").html(`&lt;div style='text-align: center;' class="bill-proof-container"&gt;&lt;img width=${imgWidth} src=${billUrl} /&gt;&lt;/div&gt;`)</span>
-<span class="cstat-no" title="statement not covered" >    $('#modaleFile').modal('show')</span>
+  handleClickIconEye = (icon) =&gt; {
+    const billUrl = icon.getAttribute("data-bill-url")
+    const imgWidth = Math.floor($('#modaleFile').width() * 0.5)
+    $('#modaleFile').find(".modal-body").html(`&lt;div style='text-align: center;' class="bill-proof-container"&gt;&lt;img width=${imgWidth} src=${billUrl} /&gt;&lt;/div&gt;`)
+    $('#modaleFile').modal('show')
   }
 &nbsp;
   // not need to cover this function by tests
@@ -244,7 +244,7 @@ export default class {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Feb 07 2022 22:06:04 GMT+0100 (heure normale d’Europe centrale)
+                at Mon Feb 07 2022 23:22:33 GMT+0100 (heure normale d’Europe centrale)
             </div>
         </div>
         <script src="../prettify.js"></script>
