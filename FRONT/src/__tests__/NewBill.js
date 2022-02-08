@@ -69,6 +69,39 @@ describe("Given I am connected as an employee", () => {
                 expect(fileInput.files[0]).toStrictEqual(image)
                 expect(fileInput.files).toHaveLength(1)
             })
+
+            test("If this file has an unsupported format", () => {
+
+                // initialisation
+                const onNavigate = (pathname) => { document.body.innerHTML = ROUTES({ pathname }) }
+                const html = NewBillUI()
+                document.body.innerHTML = html
+
+                // mock pour l'alert
+                window.alert = jest.fn()
+                jest.spyOn(window, 'alert').mockImplementation(() => {});
+
+                let containerNewBill = new NewBill({
+                    document,
+                    onNavigate,
+                    store: null,
+                    localStorage: window.localStorage,
+                })
+
+                // utilisation d'un fichier valide pour le test
+                const image = new File(['test'], 'fileKO.pdf', { type: 'application/pdf' })
+                const fileInput = screen.getByTestId('file')
+                const handleChange = jest.fn(containerNewBill.handleChangeFile)
+                fileInput.addEventListener('change', (e) => {
+                    handleChange(e);
+                })
+                userEvent.upload(fileInput, image)
+
+                // verifie si la methode a ete appele et si on a bien le fichier
+                expect(handleChange).toHaveBeenCalled()
+                expect(containerNewBill.fileName).toBeNull()
+                expect(window.alert).toBeCalledWith("Format de fichier invalide !");
+            })
         })
     })
 })
