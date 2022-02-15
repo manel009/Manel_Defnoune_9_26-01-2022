@@ -9,9 +9,9 @@ import NewBillUI from "../views/NewBillUI.js"
 import NewBill from "../containers/NewBill.js"
 
 import { localStorageMock } from '../__mocks__/localStorage.js'
-import store from "../../src/app/Store.js"
+import store from "../__mocks__/store.js"
 import { ROUTES } from '../constants/routes'
-import Router from '../app/Router.js'
+import BillsUI from '../views/BillsUI.js'
 
 // On se connect en tant qu'employee avant les tests
 Object.defineProperty(window, 'localStorage', {
@@ -158,4 +158,49 @@ describe("Given I am connected as an employee", () => {
         })
 
     })
+})
+
+// test d'intégration GET
+describe("Given I am a user connected as Employee", () => {
+
+    test("post bills with mock API POST", async() => {
+        // création d'un bill de test
+        const email = JSON.parse(localStorage.getItem('user')).email
+        const testBill = {
+            email,
+            type: 'Transports',
+            name: 'Test',
+            amount: 100,
+            date: '2022-01-28',
+            vat: '70',
+            pct: 20,
+            commentary: 'Test commentaire',
+            fileUrl: 'https://test.com/test.jpg',
+            fileName: 'test.jpg',
+            status: 'pending'
+        }
+        const postSpy = jest.spyOn(store, 'post')
+        const bills = await store.post(testBill)
+        expect(postSpy).toHaveBeenCalledTimes(1)
+        expect(bills.data.length).toBe(1)
+    })
+    test("post bills from an API and fails with 404 message error", async() => {
+        store.post.mockImplementationOnce(() =>
+            Promise.reject(new Error("Erreur 404"))
+        )
+        const html = BillsUI({ error: "Erreur 404" })
+        document.body.innerHTML = html
+        const message = await screen.getByText(/Erreur 404/)
+        expect(message).toBeTruthy()
+    })
+    test("fetches messages from an API and fails with 500 message error", async() => {
+        store.post.mockImplementationOnce(() =>
+            Promise.reject(new Error("Erreur 500"))
+        )
+        const html = BillsUI({ error: "Erreur 500" })
+        document.body.innerHTML = html
+        const message = await screen.getByText(/Erreur 500/)
+        expect(message).toBeTruthy()
+    })
+
 })
